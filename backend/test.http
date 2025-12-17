@@ -1,0 +1,16 @@
+###
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "username": "randall2",
+    "passwprd": "123456"
+}
+
+###
+GET http://localhost:8080/user/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJsb2dpbl91c2VyX2lkIjoxfQ.A3iRROjcOWsSHWOq7qm9rfGhUstU3UyaTwDiqe9413s
+
+
+###
+GET http://localhost:8080/user/list
