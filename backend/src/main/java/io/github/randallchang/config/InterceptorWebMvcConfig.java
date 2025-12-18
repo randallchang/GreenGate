@@ -16,6 +16,7 @@ public class InterceptorWebMvcConfig implements WebMvcConfigurer {
     private final JwtTokenInterceptor jwtTokenInterceptor;
 
     @Override
+    @SuppressWarnings("null")
     public void addInterceptors(@NonNull InterceptorRegistry registry) {
         registry.addInterceptor(jwtTokenInterceptor).excludePathPatterns(List.of("/login"));
     }
