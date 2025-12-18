@@ -9,22 +9,17 @@
         <template #header>
           <div class="card-header">
             <span class="header-title">
-              <el-icon><User /></el-icon>
+              <el-icon>
+                <User />
+              </el-icon>
               User List
             </span>
             <el-button type="primary" :icon="Refresh" circle @click="getUserList" :loading="tableLoading" />
           </div>
         </template>
-        <el-table
-          v-loading="tableLoading"
-          :data="userList"
-          stripe
-          size="large"
-          empty-text="No data"
-          style="width: 100%"
+        <el-table v-loading="tableLoading" :data="userList" stripe size="large" empty-text="No data" style="width: 100%"
           :header-cell-style="{ background: '#f5f7fa', color: '#606266', fontWeight: '600' }"
-          :row-style="{ height: '60px' }"
-        >
+          :row-style="{ height: '60px' }">
           <el-table-column type="index" label="#" width="60" align="center" />
           <el-table-column prop="id" label="ID" width="100" align="center">
             <template #default="{ row }">
@@ -46,8 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ref, onMounted } from 'vue'
 import { User, UserFilled, Refresh } from '@element-plus/icons-vue'
 import { UserList } from '@/api/user'
 
@@ -67,7 +61,10 @@ function getUserList() {
     })
 }
 
-getUserList()
+onMounted(() => {
+  getUserList()
+})
+
 </script>
 
 <style scoped>
