@@ -3,7 +3,7 @@ import {getToken} from '@/util/cookieUtil'
 import axios from 'axios'
 
 let request = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: import.meta.env.VITE_API_BASE_URL,
     timeout: 30000,
     headers: {
         'content-type': 'application/json;charset=utf-8'

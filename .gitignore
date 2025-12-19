@@ -37,3 +37,5 @@ __screenshots__/
 # Build Tools
 target/
 !.mvn/wrapper/maven-wrapper.jar
+
+**/static/**
