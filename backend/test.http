@@ -4,12 +4,12 @@ Content-Type: application/json
 
 {
     "username": "randall2",
-    "passwprd": "123456"
+    "password": "123456"
 }
 
 ###
 GET http://localhost:8080/user/list
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJsb2dpbl91c2VyX2lkIjoxfQ.A3iRROjcOWsSHWOq7qm9rfGhUstU3UyaTwDiqe9413s
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJsb2dpbl91c2VyX2lkIjoyfQ.uTMGharDR3X_IT_dldSD6Zj2BYQdOJymwZuR2TH0hKQ
 
 
 ###
